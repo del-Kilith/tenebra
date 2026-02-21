@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Stars</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Playwrite NZ Basic", cursive;
+            overflow: hidden;
+            background: black;
+            font-size: 16px;
+        }
+        body.onDark {
+            text-shadow: 1px 1px 2px #000000;
+            color: #fbd7de;
+        }
+        div#debug {
+            position: absolute;
+            color: white;
+            font-family: serif;
+        }
+
+        div.container {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        div.container > span {
+            position: relative;
+            padding: 0 0.25rem;
+            min-height: 23px;
+        }
+        div.container > span:last-child:after {
+            content: '';
+            position: absolute;
+            inset: 0 0 0 auto;
+            animation: blink 1s linear infinite;
+        }
+
+        @keyframes blink {
+            to {
+                border-right: none;
+            }
+            from {
+                border-right: 1px solid black;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="debug">
+    <p id="sample-rate"></p>
+    <p id="fps"></p>
+    <p id="frame-spikes"></p>
+    <p id="falling-stars"></p>
+    <p id="simulation-time"></p>
+    <p id="loaded-images"></p>
+    <p id="wake-lock"></p>
+</div>
+
+<div class="container"></div>
+
+<canvas></canvas>
+<script src="extensions.js"></script>
+<script src="debug.js"></script>
+<script src="images.js"></script>
+<script src="physics.js"></script>
+<script src="renderer.js"></script>
+<script src="background.js"></script>
+<script src="animations.js"></script>
+<script src="falling-stars.js"></script>
+<script src="gen-images.js"></script>
+<script src="gems.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
