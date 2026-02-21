@@ -9,24 +9,25 @@ const _wakeLock = _debug.querySelector('#wake-lock')
 
 const Debug = {
   setSampleRate: function(sample) {
-    _sampleRate.innerText = `Sampling every: ${sample} frames`
+    //_sampleRate.innerText = `Sampling every: ${sample} frames`
   },
   setFPS: function(fps) {
-    _fps.innerText = `${fps.toFixed(2)} FPS`
+    //_fps.innerText = `${fps.toFixed(2)} FPS`
   },
   setFrameSpikes: function(frameSpikes) {
-    _frameSpikes.innerText = `Frame rate spikes: ${frameSpikes}`
+    //_frameSpikes.innerText = `Frame rate spikes: ${frameSpikes}`
   },
   setFallingStars: function(count) {
-    _fallingStars.innerText = `Falling stars count: ${count}`
+    //_fallingStars.innerText = `Falling stars count: ${count}`
   },
   setSimulationTime: function(time) {
-    _simulationTime.innerText = `Simulation time: ${(time / 1000).toFixed(2)}s`
+    //_simulationTime.innerText = `Simulation time: ${(time / 1000).toFixed(2)}s`
   },
   setLoadedImages: function(images) {
-    _loadedImages.innerText = `Loaded images: ${images}`
+    //_loadedImages.innerText = `Loaded images: ${images}`
   },
   setWakeLock: function(success) {
-    _wakeLock.innerText = `Wake lock: ${success}`
+    //_wakeLock.innerText = `Wake lock: ${success}`
   }
 }
+
